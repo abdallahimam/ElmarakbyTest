@@ -1,0 +1,46 @@
+﻿@model EmployerModel
+
+@{
+    ViewData["Title"] = "Edit Employer";
+}
+
+<div class="container">
+   <h4 class="h1">Edit Employer</h4>
+   <hr />
+   <div class="row">
+       <div class="col-md-6 mb-5">
+            <form asp-action="Edit" asp-controller="Employers" enctype="multipart/form-data">
+               <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+               <div class="form-group mb-3">
+                   <label asp-for="Name"></label>
+                   <input asp-for="Name" class="form-control" />
+                   <span asp-validation-for="Name" class="text-danger"></span>
+               </div>
+               <div class="form-group mb-3">
+                   <label asp-for="Title"></label>
+                   <input asp-for="Title" class="form-control" />
+                   <span asp-validation-for="Title" class="text-danger"></span>
+               </div>
+
+            <div class="form-group mb-3">
+               <label asp-for="Salary"></label>
+               <input asp-for="Salary" class="form-control" />
+               <span asp-validation-for="Salary" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+               <label asp-for="Image"></label>
+               <input asp-for="Image" class="form-control" />
+               <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+               
+               <button type="submit" class="btn btn-primary">Update</button>
+               
+           </form>
+       </div>
+   </div>
+
+   <div>
+       <a asp-action="Index">Back to Home</a>
+   </div>
+</div>
